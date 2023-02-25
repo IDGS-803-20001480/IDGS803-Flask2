@@ -3,6 +3,13 @@
 
     {% block content %}
     
-    <h1>La multiplicacion de {{n1}}x{{n2}}={{res}}</h1>
+    <h3>El total de numeros ingresados es {{numerosIngresados}}</h3>
+    <h3>El numero mayor es:{{mayor}}</h3>
+    <h3>El numero menor es:{{menor}}</h3>
+    <h3>La suma de los numeros es: {{suma}}</h3>
+    <h3>El promedio es: {{promedio}}</h3>(
 
+    {% for i in repetidos %}
+    <h3>{{i}}</h3>
+    {% endfor %}
     {% endblock %}
