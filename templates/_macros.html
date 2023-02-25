@@ -19,6 +19,13 @@
 
         </div>
     </div>
+    {%if field.error%}
+        <ul>
+            {%for error in field.errors%}
+                <li style="color: red;">{{error}}</li>
+            {%endfor%}
+        </ul>
+    {%endif%}
 
 {% endmacro %}
 

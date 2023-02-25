@@ -3,24 +3,25 @@
 {% block content %}
 
 {% from "_macros.html" import render_input %}
-
-<form name="form1" method="post">
+<div class="container">
+<form name="form" method="post" novalidate>
     <div class="control_group">
         <div class="control">
+            {{form.csrf_token}}
+            <input type="hidden" name="csrf_token" value="{{csrf_token()}}">
             {{render_input("txtMatricula","Matricula")}}
             {{render_input("txtNombre","Nombre")}}
             {{render_input("txtEdad","Edad",type="number")}}
             {{render_input("txtEmail","Email",type="email")}}
             {{render_input("txtContrasena","Contrasena",type="password")}}
             
-
-
-
-
-            <button type="submit" class="btn btn-default btn-primary">
-                <i class="icon-book icon-white"></i>
-                </button>
         </div>
     </div>
+    <div class="controls">
+        <button type="submit" class="btn btn-default btn-primary">
+        Enviar
+        </button>
+    </div>
 </form>
+</div>
 {% endblock %}
