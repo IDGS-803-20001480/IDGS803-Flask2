@@ -7,8 +7,6 @@
 <form name="form" method="post" novalidate>
     <div class="control_group">
         <div class="control">
-            {{form.csrf_token}}
-            <input type="hidden" name="csrf_token" value="{{csrf_token()}}">
             {{render_input("txtMatricula","Matricula")}}
             {{render_input("txtNombre","Nombre")}}
             {{render_input("txtEdad","Edad",type="number")}}

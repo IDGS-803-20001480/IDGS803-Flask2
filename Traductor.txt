@@ -1,0 +1,6 @@
+hello=hola
+blue=azul
+food=comida
+yellow=amarillo
+phone=telefono
+white=blanco
